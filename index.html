@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+   https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyDElmzMkhnLIdLCv-_w0eXSvoHZnRUzufk",
+  authDomain: "eatmd-54cc2.firebaseapp.com",
+  databaseURL: "https://eatmd-54cc2.firebaseio.com",
+  projectId: "eatmd-54cc2",
+  storageBucket: "eatmd-54cc2.appspot.com",
+  messagingSenderId: "886811965171",
+  appId: "1:886811965171:web:01c76459c187f7b4"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+  <div id="login_div" class="main-div">
+    <h3>Firebase Web Login</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+  <script src="index.js"></script>
+
+
+</body>
+</html>
